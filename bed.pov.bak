@@ -1,0 +1,43 @@
+#include "colors.inc"  
+#include "textures.inc"
+
+	background{rgb<1,1,1>}
+
+
+camera{
+location <0,0,5>
+look_at<0,0,0>
+}
+
+
+light_source{
+<0,0,-1000> 
+rgb<1,1,1>
+}
+
+#declare Box= box{
+	<1,0.1,0>
+	<3,0,0>
+}
+
+object{ Box  //base part
+scale <0,3,0>
+translate <-2,0,0>}
+
+object{ Box //upper part
+rotate <0,0,90>
+scale 0.2
+translate <-0.94,0.,0>
+}
+
+object{ Box
+rotate <0,0,-90>
+scale 0.2
+translate<-0.95,0.2,0> 
+}
+object{
+	Box
+	rotate <0,0,-90>
+	scale 0.2
+	translate <0.95,0.2,0>
+}

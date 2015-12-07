@@ -1,0 +1,88 @@
+ //closet
+
+#include "colors.inc"  
+#include "textures.inc"
+
+background{rgb<1,1,1>}
+camera{
+location <0,0,-16>
+look_at<0,0,01>
+}
+
+light_source{
+<0,0,-1000> 
+rgb<1,1,1>
+}
+
+#declare Closet = union{
+	#declare Box=box{
+	<0,0,0>
+	<2,3,2>
+	texture{
+		pigment{
+			image_map {"Wood.jpg"}
+		}}}
+
+object{ Box} //original upper box
+
+object { Box  //left side box
+translate <2.1,0,0>}
+
+object{ Box              // first drawers
+translate <0,-3.1,0>
+scale <2.07,0.2,0>
+texture{
+		pigment{
+		  image_map {"woodtexture.jpg"}
+		}}}
+
+object{ Box        //second drawers
+translate <0,-6.4,0>
+scale <2.07,0.2,0>
+texture{
+		pigment{
+			image_map {"woodtexture.jpg"}
+			
+		}}}
+};
+
+/*
+#declare Handle = union{
+cylinder{
+	<0,0,0>
+	<0,1,0>
+	.1
+	translate <0,0,-10>
+}
+
+cylinder{
+	<0,0,0>
+	<0,1,0>
+	.1
+	rotate <0,0,90>
+	translate <0.1,0,-10>
+}
+
+cylinder{
+	<0,0,0>
+	<0,1,0>
+	.1
+	rotate <0,0,90>
+	translate <0.1,1,-10>
+}
+};
+*/
+object{
+Closet	
+finish{    
+     roughness 0.75
+      specular .35
+ }    
+  }
+
+//object{
+//	Handle
+//	rotate <0,0,180>
+//	scale .5
+//}
+

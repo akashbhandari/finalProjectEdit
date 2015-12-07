@@ -1,0 +1,18 @@
+include "colors.inc"  
+include "CATLabTextures.inc"  
+
+
+background{rgb<1,1,1>}
+
+
+camera{
+location <-10,0,0>
+look_at<0,0,0>
+}
+
+
+light_source{
+<0,0,-1000> 
+rgb<1,1,1>
+}
+
